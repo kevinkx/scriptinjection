@@ -35,7 +35,6 @@ rows := xlsx.GetRows("Sheet1")
 Dont forget to change format in date column (Format -> Number -> Plain Text)
 
 and you must modify this code 
-change this line with your sheet name
 ```python
 		date := strings.Split(row["start_date"], "/")
 		dataString += `"start_date": "20`+date[2]+"-"+date[0]+"-"+date[1]+`T07:00:00+07:00",`
