@@ -31,3 +31,19 @@ change this line with your sheet name
 rows := xlsx.GetRows("Sheet1")
 ```
 
+#### Date
+Dont forget to change format in date column (Format -> Number -> Plain Text)
+
+and you must modify this code 
+change this line with your sheet name
+```python
+		date := strings.Split(row["start_date"], "/")
+		dataString += `"start_date": "20`+date[2]+"-"+date[0]+"-"+date[1]+`T07:00:00+07:00",`
+		//save start_date for recurrence
+		start_date:=`"20`+date[2]+"-"+date[0]+"-"+date[1]+`T07:00:00+07:00"`
+
+		date = strings.Split(row["due_date"], "/")
+		dataString += `"due_date": "20`+date[2]+"-"+date[0]+"-"+date[1]+`T23:59:59+07:00",`
+```
+
+you must adjust the array of date with date format in excel. that code valid with case MM/DD/YY.
